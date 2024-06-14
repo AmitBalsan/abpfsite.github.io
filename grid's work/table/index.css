@@ -1,0 +1,12 @@
+table,
+th,
+td {
+  border: 2px solid;
+  border-color: rgb(110, 168, 63);
+  font-weight: normal;
+}
+
+th {
+  background-color: green;
+  color: white;
+}/*# sourceMappingURL=index.css.map */
