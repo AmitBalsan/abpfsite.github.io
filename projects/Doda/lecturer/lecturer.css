@@ -1,0 +1,192 @@
+body {
+  color: rgba(0, 0, 0, 0.654);
+  font-size: 26px;
+  margin-right: 12%;
+  margin-left: 12%;
+}
+
+.navbar {
+  border-top: 1px solid black;
+  margin-top: 120px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: "";
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar img {
+  width: 50px;
+  height: 50px;
+}
+.navbar a {
+  padding: 13px 20px 13px 20px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.654);
+}
+.navbar a:hover {
+  background-color: rgba(19, 62, 90, 0.472);
+  border-radius: 10px;
+}
+
+.mainContainer {
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: 22% 1fr;
+  grid-template-areas: "userMenu inner";
+}
+.mainContainer__lecturerMenu, .mainContainer__lecturerCourseM {
+  grid-area: userMenu;
+  box-shadow: 4.45px 4.45px 4.45px 4.45px rgba(175, 165, 146, 0.6);
+  padding: 20px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: "";
+}
+.mainContainer__lecturerCourseM__back:hover {
+  cursor: pointer;
+}
+.mainContainer____lecturerMenu__fullName {
+  font-size: 32px;
+}
+.mainContainer____lecturerMenu__fullName, .mainContainer__lecturerMenu__courses, .mainContainer__lecturerMenu__profile, .mainContainer__lecturerMenu__contact, .mainContainer__lecturerCourseM__attendance, .mainContainer__lecturerCourseM__grades, .mainContainer__lecturerCourseM__video, .mainContainer__lecturerCourseM__zoom {
+  padding: 10px;
+  border-radius: 10px;
+}
+.mainContainer____lecturerMenu__fullName:hover, .mainContainer__lecturerMenu__courses:hover, .mainContainer__lecturerMenu__profile:hover, .mainContainer__lecturerMenu__contact:hover, .mainContainer__lecturerCourseM__attendance:hover, .mainContainer__lecturerCourseM__grades:hover, .mainContainer__lecturerCourseM__video:hover, .mainContainer__lecturerCourseM__zoom:hover {
+  background-color: rgba(19, 62, 90, 0.472);
+  cursor: pointer;
+}
+.mainContainer__lecturerMenu__fullName, .mainContainer__lecturerCourseM__courseName {
+  font-weight: bold;
+  font-size: 30px;
+}
+.mainContainer__grades__tableGrade, .mainContainer__attendance__tableAtt {
+  width: 500px;
+}
+.mainContainer__grades, .mainContainer__attendance {
+  display: flex;
+  flex-direction: column;
+  justify-content: "";
+  align-items: "";
+}
+.mainContainer__inner, .mainContainer__attendance, .mainContainer__lessons, .mainContainer__grades, .mainContainer__lessonsG {
+  grid-area: inner;
+  margin-left: 100px;
+  flex-wrap: wrap;
+}
+.mainContainer__attendance__submitButton, .mainContainer__grades__submitButtonG {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 150px;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(19, 62, 90, 0.472);
+}
+.mainContainer__attendance__submitButton:hover, .mainContainer__grades__submitButtonG:hover {
+  background-color: rgb(9, 14, 43);
+  color: white;
+}
+.mainContainer__lecturerCourseM__top {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: "";
+  justify-content: space-between;
+  align-items: "";
+}
+.mainContainer__lecturerCourseM__top img {
+  width: 60px;
+  height: 30px;
+}
+.mainContainer__videos {
+  display: flex;
+  flex-direction: column;
+  justify-content: "";
+  align-items: "";
+}
+.mainContainer__videos__plus {
+  width: 70px;
+  height: 70px;
+  align-self: center;
+}
+.mainContainer__videos__plus:hover {
+  cursor: pointer;
+}
+.mainContainer .btn {
+  font-weight: bold;
+  font-size: 20px;
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(19, 62, 90, 0.472);
+}
+.mainContainer .btn:hover {
+  background-color: rgb(9, 14, 43);
+  color: white;
+}
+.mainContainer__videos__newVideo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainContainer .uploadNew {
+  display: flex;
+}
+.mainContainer__videos__innerVideos {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 100px;
+}
+
+.CourseCard {
+  background-color: rgb(9, 14, 43);
+  color: white;
+  margin-bottom: 50px;
+  padding: 30px;
+  width: 800px;
+  height: 220px;
+  box-shadow: 4.45px 4.45px 4.45px 4.45px rgba(175, 165, 146, 0.6);
+}
+.CourseCard h2 {
+  color: rgb(50, 132, 186);
+  text-align: center;
+  font-size: 46px;
+}
+.CourseCard:hover {
+  transition: 0.5s;
+  background-color: rgba(9, 14, 43, 0.673);
+  cursor: pointer;
+}
+
+.cardDate {
+  width: 150px;
+  height: 150px;
+  padding: 15px;
+  background-color: rgba(195, 201, 207, 0.662);
+  box-shadow: 4.45px 4.45px 4.45px 4.45px rgba(11, 4, 35, 0.358);
+  margin-right: 50px;
+  margin-bottom: 30px;
+}
+.cardDate:hover {
+  background-color: rgb(11, 4, 35);
+  color: white;
+  cursor: pointer;
+}
+
+.videoCard {
+  width: 450px;
+  height: 400px;
+  margin-right: 20px;
+}
+
+.profileCard {
+  margin-left: 100px;
+  color: rgba(0, 0, 0, 0.654);
+}/*# sourceMappingURL=lecturer.css.map */

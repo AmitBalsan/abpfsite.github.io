@@ -1,0 +1,134 @@
+body {
+  color: rgba(0, 0, 0, 0.654);
+  font-size: 26px;
+  margin-right: 12%;
+  margin-left: 12%;
+}
+
+.navbar {
+  border-top: 1px solid black;
+  margin-top: 120px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: "";
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar img {
+  width: 50px;
+  height: 50px;
+}
+.navbar a {
+  padding: 13px 20px 13px 20px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.654);
+}
+.navbar a:hover {
+  background-color: rgba(19, 62, 90, 0.472);
+  border-radius: 10px;
+}
+
+.container {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-row-gap: 80px;
+  grid-column-gap: 30px;
+  grid-template-areas: "pic1 box1 box1" "box2 box2 pic2" "pic3 box3 box3" "box4 box4 pic4" "pic5 box5 box5" "box6 box6 pic6";
+}
+.container__course1Pic {
+  grid-area: pic1;
+  background-image: url(../images/QA.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: "";
+  color: "";
+  transition: all 0.5s ease-in-out;
+}
+.container__course1Pic:hover {
+  transform: scale(105%);
+}
+.container__course1Info {
+  grid-area: box1;
+}
+.container__course2Pic {
+  grid-area: pic2;
+  background-image: url(../images/cyber.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: "";
+  color: "";
+  transition: all 0.5s ease-in-out;
+}
+.container__course2Pic:hover {
+  transform: scale(105%);
+}
+.container__course2Info {
+  grid-area: box2;
+}
+.container__course3Pic {
+  grid-area: pic3;
+  background-image: url(../images/fullstuck.jfif);
+  background-size: cover;
+  background-position: center;
+  font-size: "";
+  color: "";
+  transition: all 0.5s ease-in-out;
+}
+.container__course3Pic:hover {
+  transform: scale(105%);
+}
+.container__course3Info {
+  grid-area: box3;
+}
+.container__course4Pic {
+  grid-area: pic4;
+  background-image: url(../images/uxui.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: "";
+  color: "";
+  transition: all 0.5s ease-in-out;
+}
+.container__course4Pic:hover {
+  transform: scale(105%);
+}
+.container__course4Info {
+  grid-area: box4;
+}
+.container__course5Pic {
+  grid-area: pic5;
+  background-image: url(../images/sap.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: "";
+  color: "";
+  transition: all 0.5s ease-in-out;
+}
+.container__course5Pic:hover {
+  transform: scale(105%);
+}
+.container__course5Info {
+  grid-area: box5;
+}
+.container__course6Pic {
+  grid-area: pic6;
+  background-image: url(../images/devOps.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: "";
+  color: "";
+  transition: all 0.5s ease-in-out;
+}
+.container__course6Pic:hover {
+  transform: scale(105%);
+}
+.container__course6Info {
+  grid-area: box6;
+}
+
+h3 {
+  color: rgb(9, 14, 43);
+}/*# sourceMappingURL=courses.css.map */

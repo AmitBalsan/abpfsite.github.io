@@ -1,0 +1,132 @@
+@import "../MainScreen/var.scss";
+@import "../MainScreen/_mixin.scss";
+
+body {
+  @include body_style(rgba(0, 0, 0, 0.654), 26px, 12%, 12%);
+}
+
+.navbar {
+  border-top: 1px solid black;
+  margin-top: 120px;
+  font-size: 30px;
+  @include flex_style(flex, "", space-between, center);
+
+  img {
+    @include size_wh(50px, 50px);
+  }
+
+  a {
+    padding: 13px 20px 13px 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.654);
+    &:hover {
+      background-color: $button_background;
+      border-radius: 10px;
+    }
+  }
+}
+
+.container {
+  $self: &;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-row-gap: 80px;
+  grid-column-gap: 30px;
+  grid-template-areas:
+    "pic1 box1 box1"
+    "box2 box2 pic2"
+    "pic3 box3 box3"
+    "box4 box4 pic4"
+    "pic5 box5 box5"
+    "box6 box6 pic6";
+
+  &__course1Pic {
+    grid-area: pic1;
+    background-image: URL(../images/QA.jpg);
+    @include pic_Background(cover, center, "", "");
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(105%);
+    }
+  }
+
+  &__course1Info {
+    grid-area: box1;
+  }
+  &__course2Pic {
+    grid-area: pic2;
+    background-image: URL(../images/cyber.jpg);
+    @include pic_Background(cover, center, "", "");
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(105%);
+    }
+  }
+
+  &__course2Info {
+    grid-area: box2;
+  }
+
+  &__course3Pic {
+    grid-area: pic3;
+    background-image: URL(../images/fullstuck.jfif);
+    @include pic_Background(cover, center, "", "");
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(105%);
+    }
+  }
+
+  &__course3Info {
+    grid-area: box3;
+  }
+
+  &__course4Pic {
+    grid-area: pic4;
+    background-image: URL(../images/uxui.jpg);
+    @include pic_Background(cover, center, "", "");
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(105%);
+    }
+  }
+
+  &__course4Info {
+    grid-area: box4;
+  }
+
+  &__course5Pic {
+    grid-area: pic5;
+    background-image: URL(../images/sap.jpg);
+    @include pic_Background(cover, center, "", "");
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(105%);
+    }
+  }
+
+  &__course5Info {
+    grid-area: box5;
+  }
+
+  &__course6Pic {
+    grid-area: pic6;
+    background-image: URL(../images/devOps.jpg);
+    @include pic_Background(cover, center, "", "");
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(105%);
+    }
+  }
+
+  &__course6Info {
+    grid-area: box6;
+  }
+}
+
+h3 {
+  color: $hover_background;
+}

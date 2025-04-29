@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./dist/lecturer.js"></script>
+    <link rel="stylesheet" href="./lecturer.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      class="centerForm"
+      onsubmit="event.preventDefault(); addGrade(event);"
+    >
+      <div>
+        <label for="students">student Name:</label>
+        <select name="students" id="students">
+          <option value="Danielle Yehezkel">Danielle Yehezkel</option>
+          <option value="Idan Hershman">Idan Hershman</option>
+          <option value="Amit">Amit</option>
+          <option value="Ziv Vekstein">Ziv Vekstein</option>
+          <option value="Idan Hershman">Idan Hershman</option>
+          <option value="Amit">Amit</option>
+          <option value="Ron Yaakov">Ron Yaakov</option>
+          <option value="Guy Izraelov">Guy Izraelov</option>
+          <option value="Aliyah Mesika">Aliyah Mesika</option>
+          <option value="Dotan Toledano">Dotan Toledano</option>
+          <option value="Lihi Sapir">Lihi Sapir</option>
+          <option value="Lital">Lital</option>
+          <option value="Galit">Galit</option>
+          <option value="Matan Shlomo">Matan Shlomo</option>
+          <option value="Anastasia">Anastasia</option>
+          <option value="Gal">Gal</option>
+          <option value="Zohar">Zohar</option>
+          <option value="Tom">Tom</option>
+          <option value="Amir Ram">Amir Ram</option>
+          <option value=" Yarin Eliyahu">Yarin Eliyahu</option>
+          <option value="Shlomo">Shlomo</option>
+          <option value="Oshrat Arvili">Oshrat Arvili</option>
+          <option value="Rut">Rut</option>
+          <option value="Rachel Wasy">Rachel Wasy</option>
+          <option value="Or">Or</option>
+          <option value="Josef">Josef</option>
+          <option value="Daniel">Daniel</option>
+          <option value="Alon">Alon</option>
+        </select>
+      </div>
+      <div>
+        <label for="grade"> grade :</label>
+        <input type="text" name="grade" id="grade" required />
+      </div>
+
+      <div>
+        <label for="note"> note :</label>
+        <input type="text" name="note" id="note" required />
+      </div>
+
+      <button class="button" type="submit">Submit</button>
+    </form>
+    <table>
+      <tr>
+        <th>student Name</th>
+        <th>grade</th>
+        <th>note</th>
+      </tr>
+      <tr>
+        <td>Danielle Yehezkel</td>
+        <td><input type="text" id="grade1" /></td>
+        <td><input type="text" id="note1" /></td>
+      </tr>
+      <tr>
+        <td>Amit</td>
+        <td><input type="text" id="grade2" /></td>
+        <td><input type="text" id="note2" /></td>
+      </tr>
+      <tr>
+        <td>Idan Hershman</td>
+        <td><input type="text" id="grade3" /></td>
+        <td><input type="text" id="note3" /></td>
+      </tr>
+      <tr>
+        <td>Ziv Vekstein</td>
+        <td><input type="text" id="grade4" /></td>
+        <td><input type="text" id="note4" /></td>
+      </tr>
+      <tr>
+        <td>Ron Yaakov</td>
+        <td><input type="text" id="grade5" /></td>
+        <td><input type="text" id="note5" /></td>
+      </tr>
+      <tr>
+        <td>Danielle Yehezkel</td>
+        <td><input type="text" id="grade6" /></td>
+        <td><input type="text" id="note6" /></td>
+      </tr>
+      <tr>
+        <td>Guy Izraelov</td>
+        <td><input type="text" id="grade7" /></td>
+        <td><input type="text" id="note7" /></td>
+      </tr>
+      <tr>
+        <td>Aliyah Mesika</td>
+        <td><input type="text" id="grade8" /></td>
+        <td><input type="text" id="note8" /></td>
+      </tr>
+      <tr>
+        <td>Dotan Toledano</td>
+        <td><input type="text" id="grade9" /></td>
+        <td><input type="text" id="note9" /></td>
+      </tr>
+      <tr>
+        <td>Lihi Sapir</td>
+        <td><input type="text" id="grade10" /></td>
+        <td><input type="text" id="note10" /></td>
+      </tr>
+      <td>Lital</td>
+      <td><input type="text" id="grade11" /></td>
+      <td><input type="text" id="note11" /></td>
+    </tr>
+    <td>Galit</td>
+    <td><input type="text" id="grade12" /></td>
+    <td><input type="text" id="note12" /></td>
+  </tr>
+  <td>Matan Shlomo</td>
+  <td><input type="text" id="grade13" /></td>
+  <td><input type="text" id="note13" /></td>
+</tr>
+<td>Anastasia</td>
+<td><input type="text" id="grade14" /></td>
+<td><input type="text" id="note14" /></td>
+</tr>
+<td>Gal</td>
+<td><input type="text" id="grade15" /></td>
+<td><input type="text" id="note15" /></td>
+</tr>
+<td>Zohar</td>
+<td><input type="text" id="grade16" /></td>
+<td><input type="text" id="note16" /></td>
+</tr>
+<td>Tom</td>
+<td><input type="text" id="grade17" /></td>
+<td><input type="text" id="note17" /></td>
+</tr>
+<td>Amir Ram</td>
+<td><input type="text" id="grade18" /></td>
+<td><input type="text" id="note18" /></td>
+</tr>
+<td>Yarin Eliyahu</td>
+<td><input type="text" id="grade19" /></td>
+<td><input type="text" id="note19" /></td>
+</tr>
+<td>Shlomo</td>
+<td><input type="text" id="grade20" /></td>
+<td><input type="text" id="note20" /></td>
+</tr>
+<td>Oshrat Arvili</td>
+<td><input type="text" id="grade21" /></td>
+<td><input type="text" id="note21" /></td>
+</tr>
+<td>Rut</td>
+<td><input type="text" id="grade22" /></td>
+<td><input type="text" id="note22" /></td>
+</tr>
+<td>Rachel Wasy</td>
+<td><input type="text" id="grade23" /></td>
+<td><input type="text" id="note23" /></td>
+</tr>
+<td>Or</td>
+<td><input type="text" id="grade24" /></td>
+<td><input type="text" id="note24" /></td>
+</tr>
+<td>Daniel</td>
+<td><input type="text" id="grade25" /></td>
+<td><input type="text" id="note25" /></td>
+</tr>
+<td>Alon</td>
+<td><input type="text" id="grade26" /></td>
+<td><input type="text" id="note26" /></td>
+</tr>
+    </table>
+  </body>
+</html>

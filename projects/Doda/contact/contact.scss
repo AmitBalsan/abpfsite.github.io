@@ -1,0 +1,69 @@
+@import "../MainScreen/var.scss";
+@import "../MainScreen/_mixin.scss";
+
+body {
+  @include body_style(rgba(0, 0, 0, 0.654), 26px, 12%, 12%);
+}
+
+.navbar {
+  border-top: 1px solid black;
+  margin-top: 120px;
+  font-size: 30px;
+  @include flex_style(flex, "", space-between, center);
+
+  img {
+    @include size_wh(50px, 50px);
+  }
+
+  a {
+    padding: 13px 20px 13px 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.654);
+    &:hover {
+      background-color: $button_background;
+      border-radius: 10px;
+    }
+  }
+}
+
+.container {
+  @include flex_style(flex, "", space-between, "");
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 100%;
+}
+.contactForm {
+  $self: &;
+  padding: 20px 50px 50px 50px;
+  @include flex_style(flex, column, space-between, "");
+  width: 600px;
+  box-shadow: $box_shadow;
+  h1 {
+    text-align: center;
+  }
+  &__line {
+    @include flex_style(flex, "", space-between, "");
+    margin-top: 25px;
+  }
+  &__line__inputS {
+    @include size_wh(350px, 25px);
+  }
+  &__regBtn {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 50px;
+    @include size_wh(150px, 40px);
+    align-self: center;
+    border-radius: 10px;
+    border: none;
+    background-color: $button_background;
+    &:hover {
+      background-color: $hover_background;
+      color: white;
+    }
+  }
+}
+
+.map {
+  @include size_wh(600px, 500px);
+}

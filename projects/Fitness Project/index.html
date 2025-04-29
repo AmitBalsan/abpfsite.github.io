@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./dist/controller.js" defer></script>
+    <script src="./dist/model.js" defer></script>
+    <script src="./dist/view.js" defer></script>
+    <script src="./dist/index.js" defer></script>
+    <title>Your Training</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__home"><a href="./index.html">Home</a></div>
+      
+    </nav>
+    <header class="header">
+      <div class="header__images2">
+        <img src="./images/Latissimus.png" alt="" /><img
+          src="./images/Quadriceps.png"
+          alt=""
+        />
+      </div>
+      <form class="header__form" onsubmit="handleDetails(event)">
+        <h1>Register and get your strength workout!</h1>
+        <h3>Please fill your max reps in the exercises below :</h3>
+        <label for="header__username">User Name : </label>
+        <input type="text" id="header__username" /><br /><br />
+        <label for="header__pushups">Push-ups : </label>
+        <input type="number" id="header__pushups" /><br /><br />
+        <label for="header__pullups">Pull-ups : </label>
+        <input type="number" id="header__pullups" /><br /><br />
+        <label for="header__squats">Squats : </label>
+        <input type="number" id="header__squats" /><br /><br />
+        <label for="header__situps">Sit-ups : </label>
+        <input type="number" id="header__situps" /><br /><br />
+
+        
+        <input type="submit" value="Submit" />
+        <input type="Reset" value="Reset" />
+        <div class="workoutButton"></div>
+        
+      </form>
+
+      <div class="header__images1">
+        <img src="./images/abs.png" alt="" /><img
+          src="./images/biceps.png"
+          alt=""
+        />
+      </div>
+    </header>
+  </body>
+</html>

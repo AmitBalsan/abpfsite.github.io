@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/lecturer.css" />
+    <script src="./dist/helper.js" defer></script>
+    <script src="./dist/view.js" defer></script>
+    <script src="./dist/model.js" defer></script>
+    <script src="./dist/controller.js" defer></script>
+    <script src="../MainScreen/dist/helper.js" defer></script>
+    <script src="../MainScreen/dist/view.js" defer></script>
+    <script src="../MainScreen/dist/model.js" defer></script>
+    <script src="../MainScreen/dist/controller.js" defer></script>
+    <script src="../MainScreen/dist/MainScreen.js" defer></script>
+    <script src="./dist/lecturer.js" defer></script>
+    <title>DODA College</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"><img src="../MainScreen/images/logo.png" /></div>
+    </header>
+
+    <nav class="navbar">
+      <a href="../MainScreen/MainScreen.html"
+        ><img src="../MainScreen/images/home.png"
+      /></a>
+      <div><a href="../aboutUs/aboutUs.html">about us</a></div>
+      <div><a href="../contact/contact.html">contact</a></div>
+      <div><a href="../courses/courses.html">courses</a></div>
+    </nav>
+
+    <div class="mainContainer">
+      <div class="mainContainer__lecturerMenu">
+        <div class="mainContainer__lecturerMenu__fullName"></div>
+        <div class="mainContainer__lecturerMenu__courses">My Courses</div>
+        <div class="mainContainer__lecturerMenu__profile">Profile</div>
+        <div class="mainContainer__lecturerMenu__contact">Contact Us</div>
+      </div>
+
+      <div class="mainContainer__lecturerCourseM" style="display: none">
+        <div class="mainContainer__lecturerCourseM__top">
+          <div class="mainContainer__lecturerCourseM__back">
+            <img src="./images/back.png" />
+          </div>
+          <div class="mainContainer__lecturerCourseM__courseName"></div>
+        </div>
+        <div class="mainContainer__lecturerCourseM__attendance">
+          Upload Attendance
+        </div>
+        <div class="mainContainer__lecturerCourseM__grades">Upload Grades</div>
+        <div class="mainContainer__lecturerCourseM__video">Upload Videos</div>
+      </div>
+
+      <div class="mainContainer__inner"></div>
+      <div class="mainContainer__lessons" style="display: none"></div>
+      <div class="mainContainer__attendance" style="display: none">
+        <table class="mainContainer__attendance__tableAtt" id="studentsList">
+          <tr>
+            <th>Student Name</th>
+            <th>Student Attendance</th>
+          </tr>
+        </table>
+        <button class="mainContainer__attendance__submitButton" type="submit">
+          Submit
+        </button>
+      </div>
+      <div class="mainContainer__lessonsG" style="display: none"></div>
+      <div class="mainContainer__grades" style="display: none">
+        <table class="mainContainer__grades__tableGrade" id="studentsListG">
+          <tr>
+            <th>Student Name</th>
+            <th>Grade</th>
+          </tr>
+        </table>
+        <button class="mainContainer__grades__submitButtonG" type="submit">
+          Submit
+        </button>
+      </div>
+      <div class="mainContainer__videos">
+        <img
+          class="mainContainer__videos__plus"
+          src="./images/plus.png"
+          style="display: none"
+        />
+        <form
+          class="mainContainer__videos__newVideo"
+          onsubmit="HandleAddVideo(event)"
+          style="display: none"
+        >
+          <h2>Upload New Video</h2>
+          <div class="uploadNew">
+            <label class="chooseFile" for="videoFile"></label>
+            <input type="file" accept="video/mp4" name="videoFile" /><br />
+            <button class="btn" type="submit" name="AddVideo">Add Video</button>
+          </div>
+        </form>
+        <div class="mainContainer__videos__innerVideos"></div>
+      </div>
+
+    </div>
+  </body>
+</html>

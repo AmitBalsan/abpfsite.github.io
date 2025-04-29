@@ -1,0 +1,21 @@
+.title {
+  text-align: center;
+}
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30%;
+  padding: 10px 0;
+}
+
+input {
+  margin: 10px 0;
+}
+
+button {
+  margin: 10px 0;
+}
+
+.map {
+  margin: 0 20%;
+}

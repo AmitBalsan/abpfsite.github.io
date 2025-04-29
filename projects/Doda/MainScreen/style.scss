@@ -1,0 +1,199 @@
+@import "./var.scss";
+@import "./_mixin.scss";
+
+body {
+  @include body_style(rgba(0, 0, 0, 0.654), 26px, 12%, 12%);
+}
+
+.navbar {
+  border-top: 1px solid black;
+  margin-top: 120px;
+  font-size: 30px;
+  @include flex_style(flex, "", space-between, center);
+
+  img {
+    @include size_wh(50px, 50px);
+  }
+
+  a {
+    padding: 13px 20px 13px 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.654);
+    &:hover {
+      background-color: $button_background;
+      border-radius: 10px;
+    }
+  }
+}
+
+.enterUser {
+  margin-top: 50px;
+  margin-left: 370px;
+  $self: &;
+  &__boxes {
+    @include flex_style(flex, "", space-between, center);
+    width: 650px;
+    text-align: center;
+  }
+  &__boxes__lecturer,
+  &__boxes__student,
+  &__boxes__admin {
+    border: none;
+    background-color: $button_background;
+    box-shadow: $box_shadow;
+    @include size_wh(200px, 200px);
+    font-size: 40px;
+    font-weight: bold;
+    &:hover {
+      background-color: rgba(19, 62, 90, 0.139);
+      cursor: pointer;
+    }
+  }
+}
+
+.mainContainer {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  height: 1300px;
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 25px;
+  grid-template-areas:
+    "box1 box1 box2 box2"
+    "box3 registerForm registerForm box4"
+    "box5 box5 box6 box6";
+
+  .box1,
+  .box2,
+  .box3,
+  .box4,
+  .box5,
+  .box6 {
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(105%);
+      font-size: 60px;
+      cursor: pointer;
+    }
+  }
+
+  .box1 {
+    grid-area: box1;
+    background-image: URL(./images/QA.jpg);
+    background-size: cover;
+    background-position: center;
+    font-size: 40px;
+    color: white;
+  }
+  .box2 {
+    grid-area: box2;
+    background-image: URL(./images/cyber.jpg);
+    @include pic_Background(cover, center, 40px, white);
+  }
+
+  .box3 {
+    grid-area: box3;
+    background-image: URL(./images/fullstuck.jfif);
+    @include pic_Background(cover, "", 40px, white);
+  }
+
+  .box4 {
+    grid-area: box4;
+    background-image: URL(./images/uxui.jpg);
+    @include pic_Background(cover, "", 40px, white);
+  }
+
+  .box5 {
+    grid-area: box5;
+    background-image: URL(./images/sap.jpg);
+    @include pic_Background(cover, center, 40px, white);
+  }
+
+  .box6 {
+    grid-area: box6;
+    background-image: URL(./images/devOps.jpg);
+    @include pic_Background(cover, "", 40px, white);
+  }
+
+  .registerForm {
+    $self: &;
+    grid-area: registerForm;
+    padding: 20px 50px 50px 50px;
+    height: 700px;
+    margin: auto auto;
+    font-size: large;
+    @include flex_style(flex, column, space-between, "");
+    align-self: center;
+    box-shadow: 0px 0px 10.45px 10.45px rgba(10, 4, 92, 0.6);
+    h2 {
+      text-align: center;
+    }
+    &__line {
+      @include flex_style(flex, "", space-between, "");
+      margin-top: 10px;
+    }
+    &__line__inputS {
+      @include size_wh(250px, 25px);
+    }
+    &__line__listCourse {
+      @include size_wh(258px, 30px);
+      font-size: 20px;
+    }
+    &__regBtn {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 20px;
+      @include size_wh(150px, 40px);
+      align-self: center;
+      border-radius: 10px;
+      border: none;
+      background-color: $button_background;
+      &:hover {
+        background-color: $hover_background;
+        color: white;
+      }
+    }
+  }
+}
+
+.loginAdminForm,
+.loginLecturerForm,
+.loginStudentForm {
+  $self: &;
+  padding: 20px 50px 50px 50px;
+  align-self: center;
+  margin-left: 130px;
+  @include flex_style(flex, column, space-between, "");
+  width: 300px;
+  box-shadow: $box_shadow;
+  h2 {
+    text-align: center;
+  }
+  &__line {
+    @include flex_style(flex, "", space-between, "");
+    margin-top: 25px;
+  }
+  &__line__inputS {
+    @include size_wh(350px, 25px);
+  }
+  &__regBtn {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 65px;
+    @include size_wh(150px, 40px);
+    align-self: center;
+    border-radius: 10px;
+    border: none;
+    background-color: $button_background;
+    &:hover {
+      background-color: $hover_background;
+      color: white;
+    }
+  }
+}
+
+.loginAdminForm {
+  margin-left: 500px;
+}
