@@ -1,0 +1,67 @@
+body {
+  background-color: rgb(250, 244, 186);
+}
+
+.nav {
+  background-color: rgb(113, 196, 244);
+  color: rgba(242, 236, 236, 0.911);
+  font-size: 4rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  height: 6rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.nav__home {
+  margin-right: 7rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header__form {
+  background-color: rgb(250, 210, 181);
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border-style: double;
+  color: rgb(188, 103, 13);
+  font-weight: bolder;
+  font-size: 2rem;
+  margin-top: 7rem;
+}
+.header__form h1 {
+  color: rgb(154, 182, 252);
+}
+.header__images1 {
+  margin-left: 5rem;
+}
+.header__images2 {
+  margin-right: 5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header1 {
+  display: flex;
+  justify-content: center;
+}
+.header1__workout {
+  background-color: rgb(250, 210, 181);
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border-style: double;
+  color: rgb(188, 103, 13);
+  font-weight: bolder;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */

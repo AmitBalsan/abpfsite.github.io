@@ -1,0 +1,73 @@
+$cardColor: rgb(250, 210, 181);
+$textColor: rgb(188, 103, 13);
+$h-color: rgb(154, 182, 252);
+@mixin card() {
+  background-color: $cardColor;
+  width: max-content;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border-style: double;
+  color: $textColor;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+body {
+  background-color: rgb(250, 244, 186);
+}
+.nav {
+  background-color: rgb(113, 196, 244);
+  color: rgba(242, 236, 236, 0.911);
+  font-size: 4rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  height: 6rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  &__home {
+    margin-right: 7rem;
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  // flex-wrap: wrap;
+  &__form {
+    // background-color: $cardColor;
+    // width: max-content;
+    // padding: 1.5rem;
+    // border-radius: 20px;
+    // border-style: double;
+    // color: $textColor;
+    // font-weight: bolder;
+    // font-size: 2rem;
+    @include card();
+    // margin-right: 5rem;
+    margin-top: 7rem;
+
+    h1 {
+      color: $h-color;
+    }
+  }
+  &__images1 {
+    margin-left: 5rem;
+  }
+  &__images2 {
+    margin-right: 5rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header1 {
+  display: flex;
+  justify-content: center;
+  &__workout {
+    @include card();
+    display: flex;
+    flex-direction: column;
+  }
+}
