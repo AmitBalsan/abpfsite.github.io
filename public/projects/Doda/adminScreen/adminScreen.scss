@@ -1,0 +1,141 @@
+@import "../MainScreen/var.scss";
+@import "../MainScreen/_mixin.scss";
+
+body {
+  @include body_style(rgba(0, 0, 0, 0.654), 26px, 12%, 12%);
+}
+
+.navbar {
+  border-top: 1px solid black;
+  margin-top: 120px;
+  font-size: 30px;
+  @include flex_style(flex, "", space-between, center);
+
+  img {
+    @include size_wh(50px, 50px);
+  }
+
+  a {
+    padding: 13px 20px 13px 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.654);
+    &:hover {
+      background-color: $button_background;
+      border-radius: 10px;
+    }
+  }
+}
+
+.mainContainer {
+  $self: &;
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: 22% 1fr;
+  grid-template-areas: "userMenu innerForms";
+
+  &__adminMenu {
+    grid-area: userMenu;
+    box-shadow: 4.45px 4.45px 4.45px 4.45px rgba(175, 165, 146, 0.6);
+    padding: 20px;
+    height: 350px;
+    @include flex_style(flex, column, space-between, "");
+  }
+  &__adminMenu__fullName {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &____adminMenu__fullName,
+  &__adminMenu__addCourse,
+  &__adminMenu__addLecturer,
+  &__adminMenu__deleteLecturers,
+  &__adminMenu__deleteStudents,
+  &__adminMenu__deleteCourses {
+    padding: 10px;
+    border-radius: 10px;
+    &:hover {
+      background-color: rgba(50, 132, 186, 0.472);
+      cursor: pointer;
+    }
+  }
+  .deleteLecturerForm,
+  .deleteCourseForm,
+  .deleteStudents {
+    $self: &;
+    padding: 20px 50px 50px 50px;
+    margin: 0px 0px 100px 150px;
+    @include flex_style(flex, column, space-between, "");
+    align-self: center;
+    width: 600px;
+    box-shadow: 4.45px 4.45px 4.45px 4.45px rgba(175, 165, 146, 0.6);
+
+    &__delBtn {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 50px;
+      @include size_wh(150px, 40px);
+      align-self: center;
+      border-radius: 10px;
+      border: none;
+      background-color: $button_background;
+      &:hover {
+        background-color: $hover_background;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .addLecturerForm,
+  .addCourseForm {
+    grid-area: innerForms;
+    $self: &;
+    padding: 20px 50px 50px 50px;
+    margin: 0px 0px 100px 150px;
+    @include flex_style(flex, column, space-between, "");
+    align-self: center;
+    width: 600px;
+    box-shadow: 4.45px 4.45px 4.45px 4.45px rgba(175, 165, 146, 0.6);
+    h2 {
+      text-align: center;
+    }
+    &__line {
+      @include flex_style(flex, "", space-between, "");
+      margin-top: 25px;
+    }
+    &__line__inputS {
+      @include size_wh(350px, 25px);
+    }
+    &__regBtn {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 50px;
+      @include size_wh(150px, 40px);
+      align-self: center;
+      border-radius: 10px;
+      border: none;
+      background-color: $button_background;
+      &:hover {
+        background-color: $hover_background;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.courseNum {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 50px;
+  @include size_wh(150px, 40px);
+  align-self: center;
+  border-radius: 10px;
+  border: none;
+  background-color: $button_background;
+  &:hover {
+    background-color: $hover_background;
+    color: white;
+    cursor: pointer;
+  }
+}

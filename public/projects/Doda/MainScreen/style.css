@@ -1,0 +1,237 @@
+body {
+  color: rgba(0, 0, 0, 0.654);
+  font-size: 26px;
+  margin-right: 12%;
+  margin-left: 12%;
+}
+
+.navbar {
+  border-top: 1px solid black;
+  margin-top: 120px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: "";
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar img {
+  width: 50px;
+  height: 50px;
+}
+.navbar a {
+  padding: 13px 20px 13px 20px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.654);
+}
+.navbar a:hover {
+  background-color: rgba(19, 62, 90, 0.472);
+  border-radius: 10px;
+}
+
+.enterUser {
+  margin-top: 50px;
+  margin-left: 370px;
+}
+.enterUser__boxes {
+  display: flex;
+  flex-direction: "";
+  justify-content: space-between;
+  align-items: center;
+  width: 650px;
+  text-align: center;
+}
+.enterUser__boxes__lecturer, .enterUser__boxes__student, .enterUser__boxes__admin {
+  border: none;
+  background-color: rgba(19, 62, 90, 0.472);
+  box-shadow: 4.45px 4.45px 4.45px 4.45px rgba(175, 165, 146, 0.6);
+  width: 200px;
+  height: 200px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.enterUser__boxes__lecturer:hover, .enterUser__boxes__student:hover, .enterUser__boxes__admin:hover {
+  background-color: rgba(19, 62, 90, 0.139);
+  cursor: pointer;
+}
+
+.mainContainer {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  height: 1300px;
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 25px;
+  grid-template-areas: "box1 box1 box2 box2" "box3 registerForm registerForm box4" "box5 box5 box6 box6";
+}
+.mainContainer .box1,
+.mainContainer .box2,
+.mainContainer .box3,
+.mainContainer .box4,
+.mainContainer .box5,
+.mainContainer .box6 {
+  transition: all 0.5s ease-in-out;
+}
+.mainContainer .box1:hover,
+.mainContainer .box2:hover,
+.mainContainer .box3:hover,
+.mainContainer .box4:hover,
+.mainContainer .box5:hover,
+.mainContainer .box6:hover {
+  transform: scale(105%);
+  font-size: 60px;
+  cursor: pointer;
+}
+.mainContainer .box1 {
+  grid-area: box1;
+  background-image: url(./images/QA.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: 40px;
+  color: white;
+}
+.mainContainer .box2 {
+  grid-area: box2;
+  background-image: url(./images/cyber.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: 40px;
+  color: white;
+}
+.mainContainer .box3 {
+  grid-area: box3;
+  background-image: url(./images/fullstuck.jfif);
+  background-size: cover;
+  background-position: "";
+  font-size: 40px;
+  color: white;
+}
+.mainContainer .box4 {
+  grid-area: box4;
+  background-image: url(./images/uxui.jpg);
+  background-size: cover;
+  background-position: "";
+  font-size: 40px;
+  color: white;
+}
+.mainContainer .box5 {
+  grid-area: box5;
+  background-image: url(./images/sap.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: 40px;
+  color: white;
+}
+.mainContainer .box6 {
+  grid-area: box6;
+  background-image: url(./images/devOps.jpg);
+  background-size: cover;
+  background-position: "";
+  font-size: 40px;
+  color: white;
+}
+.mainContainer .registerForm {
+  grid-area: registerForm;
+  padding: 20px 50px 50px 50px;
+  height: 700px;
+  margin: auto auto;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: "";
+  align-self: center;
+  box-shadow: 0px 0px 10.45px 10.45px rgba(10, 4, 92, 0.6);
+}
+.mainContainer .registerForm h2 {
+  text-align: center;
+}
+.mainContainer .registerForm__line {
+  display: flex;
+  flex-direction: "";
+  justify-content: space-between;
+  align-items: "";
+  margin-top: 10px;
+}
+.mainContainer .registerForm__line__inputS {
+  width: 250px;
+  height: 25px;
+}
+.mainContainer .registerForm__line__listCourse {
+  width: 258px;
+  height: 30px;
+  font-size: 20px;
+}
+.mainContainer .registerForm__regBtn {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  align-self: center;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(19, 62, 90, 0.472);
+}
+.mainContainer .registerForm__regBtn:hover {
+  background-color: rgb(9, 14, 43);
+  color: white;
+}
+
+.loginAdminForm,
+.loginLecturerForm,
+.loginStudentForm {
+  padding: 20px 50px 50px 50px;
+  align-self: center;
+  margin-left: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: "";
+  width: 300px;
+  box-shadow: 4.45px 4.45px 4.45px 4.45px rgba(175, 165, 146, 0.6);
+}
+.loginAdminForm h2,
+.loginLecturerForm h2,
+.loginStudentForm h2 {
+  text-align: center;
+}
+.loginAdminForm__line,
+.loginLecturerForm__line,
+.loginStudentForm__line {
+  display: flex;
+  flex-direction: "";
+  justify-content: space-between;
+  align-items: "";
+  margin-top: 25px;
+}
+.loginAdminForm__line__inputS,
+.loginLecturerForm__line__inputS,
+.loginStudentForm__line__inputS {
+  width: 350px;
+  height: 25px;
+}
+.loginAdminForm__regBtn,
+.loginLecturerForm__regBtn,
+.loginStudentForm__regBtn {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 65px;
+  width: 150px;
+  height: 40px;
+  align-self: center;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(19, 62, 90, 0.472);
+}
+.loginAdminForm__regBtn:hover,
+.loginLecturerForm__regBtn:hover,
+.loginStudentForm__regBtn:hover {
+  background-color: rgb(9, 14, 43);
+  color: white;
+}
+
+.loginAdminForm {
+  margin-left: 500px;
+}/*# sourceMappingURL=style.css.map */

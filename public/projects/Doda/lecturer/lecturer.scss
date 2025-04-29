@@ -1,0 +1,202 @@
+@import "../MainScreen/var.scss";
+@import "../MainScreen/_mixin.scss";
+
+body {
+  @include body_style(rgba(0, 0, 0, 0.654), 26px, 12%, 12%);
+}
+
+.navbar {
+  border-top: 1px solid black;
+  margin-top: 120px;
+  font-size: 30px;
+  @include flex_style(flex, "", space-between, center);
+
+  img {
+    @include size_wh(50px, 50px);
+  }
+
+  a {
+    padding: 13px 20px 13px 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.654);
+    &:hover {
+      background-color: $button_background;
+      border-radius: 10px;
+    }
+  }
+}
+
+.mainContainer {
+  $self: &;
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: 22% 1fr;
+  grid-template-areas: "userMenu inner";
+
+  &__lecturerMenu,
+  &__lecturerCourseM {
+    grid-area: userMenu;
+    box-shadow: $box_shadow;
+    padding: 20px;
+    height: 350px;
+    @include flex_style(flex, column, space-between, "");
+  }
+
+  &__lecturerCourseM__back {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &____lecturerMenu__fullName {
+    font-size: 32px;
+  }
+
+  &____lecturerMenu__fullName,
+  &__lecturerMenu__courses,
+  &__lecturerMenu__profile,
+  &__lecturerMenu__contact,
+  &__lecturerCourseM__attendance,
+  &__lecturerCourseM__grades,
+  &__lecturerCourseM__video,
+  &__lecturerCourseM__zoom {
+    padding: 10px;
+    border-radius: 10px;
+    &:hover {
+      background-color: $button_background;
+      cursor: pointer;
+    }
+  }
+
+  &__lecturerMenu__fullName,
+  &__lecturerCourseM__courseName {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  &__grades__tableGrade,
+  &__attendance__tableAtt {
+    width: 500px;
+  }
+
+  &__grades,
+  &__attendance {
+    @include flex_style(flex, column, "", "");
+  }
+
+  &__inner,
+  &__attendance,
+  &__lessons,
+  &__grades,
+  &__lessonsG {
+    grid-area: inner;
+    margin-left: 100px;
+    flex-wrap: wrap;
+  }
+
+  &__attendance__submitButton,
+  &__grades__submitButtonG {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 150px;
+    @include size_wh(150px, 40px);
+    border-radius: 10px;
+    border: none;
+    background-color: $button_background;
+    &:hover {
+      background-color: $hover_background;
+      color: white;
+    }
+  }
+
+  &__lecturerCourseM__top {
+    margin-bottom: 30px;
+    @include flex_style(flex, "", space-between, "");
+
+    img {
+      @include size_wh(60px, 30px);
+    }
+  }
+
+  &__videos {
+    @include flex_style(flex, column, "", "");
+  }
+  &__videos__plus {
+    @include size_wh(70px, 70px);
+    align-self: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .btn {
+    font-weight: bold;
+    font-size: 20px;
+    @include size_wh(150px, 30px);
+    border-radius: 10px;
+    border: none;
+    background-color: $button_background;
+    &:hover {
+      background-color: $hover_background;
+      color: white;
+    }
+  }
+
+  &__videos__newVideo {
+    @include flex_style(flex, column, space-between, center);
+  }
+  .uploadNew {
+    display: flex;
+  }
+
+  &__videos__innerVideos {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+  }
+}
+
+.CourseCard {
+  background-color: $hover_background;
+  color: white;
+  margin-bottom: 50px;
+  padding: 30px;
+  @include size_wh(800px, 220px);
+  box-shadow: $box_shadow;
+  h2 {
+    color: rgba(50, 132, 186);
+    text-align: center;
+    font-size: 46px;
+  }
+  &:hover {
+    transition: 0.5s;
+    background-color: rgba(9, 14, 43, 0.673);
+    cursor: pointer;
+  }
+}
+
+.cardDate {
+  @include size_wh(150px, 150px);
+  padding: 15px;
+  background-color: rgba(195, 201, 207, 0.662);
+  box-shadow: 4.45px 4.45px 4.45px 4.45px rgba(11, 4, 35, 0.358);
+  margin-right: 50px;
+  margin-bottom: 30px;
+  &:hover {
+    background-color: rgba(11, 4, 35);
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.videoCard {
+  @include size_wh(450px, 400px);
+  margin-right: 20px;
+}
+
+.profileCard {
+  margin-left: 100px;
+  color: rgba(0, 0, 0, 0.654);
+}

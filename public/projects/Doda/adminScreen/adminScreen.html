@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/adminScreen.css" />
+    <script src="./dist/view.js" defer></script>
+    <script src="./dist/controller.js" defer></script>
+    <script src="../MainScreen/dist/helper.js" defer></script>
+    <script src="../MainScreen/dist/view.js" defer></script>
+    <script src="../MainScreen/dist/model.js" defer></script>
+    <script src="../MainScreen/dist/controller.js" defer></script>
+    <script src="../MainScreen/dist/MainScreen.js" defer></script>
+    <script src="./dist/adminScreen.js" defer></script>
+    <title>DODA College</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"><img src="../MainScreen/images/logo.png" /></div>
+    </header>
+
+    <nav class="navbar">
+      <a href="../MainScreen/MainScreen.html"
+        ><img src="../MainScreen/images/home.png"
+      /></a>
+      <div><a href="../aboutUs/aboutUs.html">about us</a></div>
+      <div><a href="../contact/contact.html">contact</a></div>
+      <div><a href="../courses/courses.html">courses</a></div>
+    </nav>
+
+    <div class="mainContainer">
+      <div class="mainContainer__adminMenu">
+        <div class="mainContainer__adminMenu__fullName"></div>
+        <div class="mainContainer__adminMenu__addCourse">Add Course</div>
+        <div class="mainContainer__adminMenu__addLecturer">Add Lecturer</div>
+        <div class="mainContainer__adminMenu__deleteLecturers">
+          Delete Lecturers
+        </div>
+        <div class="mainContainer__adminMenu__deleteStudents">
+          Delete Students
+        </div>
+        <div class="mainContainer__adminMenu__deleteCourses">
+          Delete Courses
+        </div>
+      </div>
+      <form
+        class="deleteLecturerForm"
+        style="display: none"
+        onsubmit="HandleDeleteLecturer(event)"
+      >
+        <div class="deleteLecturerForm__line">
+          <label for="lecturerD">Choose a Lecturer:</label>
+          <div
+            type="Lecturer"
+            class="deleteLecturerForm__line__listLecturers"
+          ></div>
+        </div>
+
+        <button
+          class="deleteLecturerForm__delBtn"
+          type="submit"
+          value="deleteLecturer"
+        >
+          Delete
+        </button>
+        <div class="deleteLecturerForm__sms"></div>
+      </form>
+      <form
+        class="deleteCourseForm"
+        style="display: none"
+        onsubmit="HandleDeleteCourse(event)"
+      >
+        <div class="deleteCourseForm__line">
+          <label for="courseD">Choose a course:</label>
+          <div type="Course" class="deleteCourseForm__line__listCourses"></div>
+        </div>
+
+        <button
+          class="deleteCourseForm__delBtn"
+          type="submit"
+          value="deleteCourse"
+        >
+          Delete
+        </button>
+        <div class="deleteCourseForm__sms"></div>
+      </form>
+      <div class="deleteStudents"></div>
+      <form
+        class="addLecturerForm"
+        style="display: none"
+        onsubmit="HandleAddLecturer(event)"
+      >
+        <h2>New Lecturer</h2>
+        <div class="addLecturerForm__line">
+          <label for="name"> Full Name:</label>
+          <input
+            class="addLecturerForm__line__inputS"
+            type="text"
+            name="name"
+            required
+          />
+        </div>
+        <div class="addLecturerForm__line">
+          <label for="id"> ID Number:</label>
+          <input
+            class="addLecturerForm__line__inputS"
+            type="number"
+            name="id"
+            required
+          />
+        </div>
+        <div class="addLecturerForm__line">
+          <label for="email">Email:</label>
+          <input
+            class="addLecturerForm__line__inputS"
+            type="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="addLecturerForm__line">
+          <label for="phone"> Phone Number:</label>
+          <input
+            class="addLecturerForm__line__inputS"
+            type="number"
+            name="phone"
+            required
+          />
+        </div>
+        <div class="addLecturerForm__line">
+          <label for="address">Address:</label>
+          <input
+            class="addLecturerForm__line__inputS"
+            type="text"
+            name="address"
+          />
+        </div>
+        <div class="addLecturerForm__line">
+          <label for="pass">Password:</label>
+          <input
+            class="addLecturerForm__line__inputS"
+            type="password"
+            name="pass"
+            required
+          />
+        </div>
+        <div class="addLecturerForm__line">
+          <label for="cPass">Confirm Password:</label>
+          <input
+            class="addLecturerForm__line__inputS"
+            type="password"
+            name="cPass"
+            required
+          />
+        </div>
+        <button
+          class="addLecturerForm__regBtn"
+          type="submit"
+          value="AddLecturer"
+        >
+          Add Lecturer
+        </button>
+        <div class="addLecturerForm__adminInnerMs"></div>
+      </form>
+
+      <form
+        class="addCourseForm"
+        style="display: none"
+        onsubmit="HandleAddCourse(event)"
+      >
+        <h2>New Course</h2>
+        <div class="addCourseForm__line">
+          <label for="name">Course Name:</label>
+          <input
+            class="addCourseForm__line__inputS"
+            type="text"
+            name="name"
+            required
+          />
+        </div>
+        <div class="addCourseForm__line">
+          <label for="dates"> Dates:(ex: 1.3 2.3)</label>
+          <input
+            class="addCourseForm__line__inputS"
+            type="text"
+            name="dates"
+            required
+          />
+        </div>
+        <div class="addCourseForm__line">
+          <label for="lecturerC">Choose a Lecturer:</label>
+          <div type="Lecturer" class="addCourseForm__line__listLecturers"></div>
+        </div>
+
+        <button class="addCourseForm__regBtn" type="submit" value="AddCourse">
+          Add Course
+        </button>
+        <div class="addCourseForm__adminInnerMs"></div>
+      </form>
+    </div>
+  </body>
+</html>

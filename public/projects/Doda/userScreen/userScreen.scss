@@ -1,0 +1,147 @@
+@import "../MainScreen/var.scss";
+@import "../MainScreen/_mixin.scss";
+
+body {
+  @include body_style(rgba(0, 0, 0, 0.654), 26px, 12%, 12%);
+}
+
+.navbar {
+  border-top: 1px solid black;
+  margin-top: 120px;
+  font-size: 30px;
+  @include flex_style(flex, "", space-between, center);
+
+  img {
+    @include size_wh(50px, 50px);
+  }
+
+  a {
+    padding: 13px 20px 13px 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.654);
+    &:hover {
+      background-color: $button_background;
+      border-radius: 10px;
+    }
+  }
+}
+
+.mainContainer {
+  $self: &;
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: 22% 1fr;
+  grid-template-areas: "userMenu inner";
+
+  &__userMenu,
+  &__courseMenu {
+    grid-area: userMenu;
+    box-shadow: $box_shadow;
+    padding: 20px;
+    height: 350px;
+    @include flex_style(flex, column, space-between, "");
+  }
+
+  &__courseMenu__top {
+    margin-bottom: 30px;
+    @include flex_style(flex, "", space-between, "");
+    img {
+      @include size_wh(60px, 30px);
+    }
+  }
+
+  &__courseMenu__back {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__userMenu__fullName,
+  &__courseMenu__courseName {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  &__courseMenu__attendance,
+  &__courseMenu__grades,
+  &__courseMenu__video,
+  &__courseMenu__zoom,
+  &__userMenu__courses,
+  &__userMenu__profile,
+  &__userMenu__contact {
+    padding: 10px;
+    border-radius: 10px;
+    &:hover {
+      background-color: $button_background;
+      cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.654);
+    }
+  }
+
+  &__inner {
+    grid-area: inner;
+    margin-left: 100px;
+    flex-wrap: wrap;
+  }
+
+  &__innerAtt {
+    margin-left: 100px;
+  }
+
+  &__innerGrade {
+    margin-left: 100px;
+  }
+
+  &__innerProfile {
+    margin-left: 100px;
+  }
+
+  &__innerVideos {
+    grid-area: inner;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+  }
+}
+
+.cardUserCourse {
+  background-color: $hover_background;
+  color: white;
+  margin-bottom: 50px;
+  padding: 30px;
+  @include size_wh(800px, 220px);
+  box-shadow: $box_shadow;
+  h2 {
+    color: rgba(50, 132, 186);
+    text-align: center;
+    font-size: 46px;
+  }
+  &:hover {
+    transition: 0.5s;
+    background-color: rgba(9, 14, 43, 0.673);
+    cursor: pointer;
+  }
+}
+
+.attLesson {
+  width: 600px;
+  padding: 20px;
+  box-shadow: $box_shadow;
+  margin-bottom: 30px;
+  box-sizing: content-box;
+}
+
+.profileCard {
+  margin-left: 100px;
+  color: rgba(0, 0, 0, 0.654);
+}
+
+.videoCard {
+  @include size_wh(450px, 400px);
+  margin-right: 20px;
+  margin-bottom: 30px;
+}

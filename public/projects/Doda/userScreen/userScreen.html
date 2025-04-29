@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/userScreen.css" />
+    <script src="./dist/helper.js" defer></script>
+    <script src="./dist/view.js" defer></script>
+    <script src="./dist/controller.js" defer></script>
+    <script src="../MainScreen/dist/helper.js" defer></script>
+    <script src="../MainScreen/dist/view.js" defer></script>
+    <script src="../MainScreen/dist/model.js" defer></script>
+    <script src="../MainScreen/dist/controller.js" defer></script>
+    <script src="../MainScreen/dist/MainScreen.js" defer></script>
+    <script src="./dist/userScreen.js" defer></script>
+
+    <title>DODA College</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"><img src="../MainScreen/images/logo.png" /></div>
+    </header>
+
+    <nav class="navbar">
+      <a href="../MainScreen/MainScreen.html"
+        ><img src="../MainScreen/images/home.png"
+      /></a>
+      <div><a href="../aboutUs/aboutUs.html">about us</a></div>
+      <div><a href="../contact/contact.html">contact</a></div>
+      <div><a href="../courses/courses.html">courses</a></div>
+    </nav>
+
+    <div class="mainContainer">
+      <div class="mainContainer__userMenu">
+        <div class="mainContainer__userMenu__fullName"></div>
+        <div class="mainContainer__userMenu__courses">My Courses</div>
+        <div class="mainContainer__userMenu__profile">Profile</div>
+        <div class="mainContainer__userMenu__contact">
+          <a href="../contact/contact.html">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="mainContainer__courseMenu" style="display: none">
+        <div class="mainContainer__courseMenu__top">
+          <div class="mainContainer__courseMenu__back">
+            <img src="../lecturer/images/back.png" />
+          </div>
+          <div class="mainContainer__courseMenu__courseName"></div>
+        </div>
+        <div class="mainContainer__courseMenu__attendance">Attendance</div>
+        <div class="mainContainer__courseMenu__grades">Grades</div>
+        <div class="mainContainer__courseMenu__video">Videos</div>
+      </div>
+
+      <div class="mainContainer__inner"></div>
+      <div class="mainContainer__innerAtt"></div>
+      <div class="mainContainer__innerGrade"></div>
+      <div class="mainContainer__innerProfile"></div>
+      <div class="mainContainer__innerVideos"></div>
+    </div>
+  </body>
+</html>
