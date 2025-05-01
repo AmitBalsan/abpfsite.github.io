@@ -5,7 +5,7 @@ import MainPage from "./pages/MainPage";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/abpfsite.github.io">
         <Routes>
           <Route path="/" element={<MainPage />}></Route>
         </Routes>
